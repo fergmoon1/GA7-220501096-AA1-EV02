@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación de Evidencia - Luis Fernando Gómez Parada</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .title {
+      background: linear-gradient(to right, #2563eb, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media (max-width: 640px) {
+      .card {
+        margin: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
+<div class="card max-w-2xl mx-auto p-8">
+  <h1 class="text-3xl font-bold text-center mb-6 title">Presentación de Evidencia</h1>
+  <div class="space-y-4">
+    <p class="text-lg"><span class="font-semibold">Nombre:</span> Luis Fernando Gómez Parada</p>
+    <p class="text-lg"><span class="font-semibold">Institución:</span> Servicio Nacional de Aprendizaje SENA</p>
+    <p class="text-lg"><span class="font-semibold">Asignatura:</span> Análisis y Desarrollo de Software</p>
+    <p class="text-lg"><span class="font-semibold">Código de la Asignatura:</span> 2885494</p>
+    <p class="text-lg"><span class="font-semibold">Código de la Evidencia:</span> GA7-220501096-AA1-EV02</p>
+    <p class="text-lg"><span class="font-semibold">Descripción:</span> Definir estándares de codificación de acuerdo a plataforma de desarrollo elegida</p>
+    <p class="text-lg"><span class="font-semibold">Fecha:</span> Abril 16, 2025</p>
+  </div>
+  <div class="mt-8 text-center">
+    <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png" alt="SENA Logo" class="mx-auto h-16">
+  </div>
+</div>
 </body>
 </html>

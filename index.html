@@ -1,33 +1,93 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe: Estándares de Codificación</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 640px) {
+      .hero-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="hero-section text-white py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Estándares de Codificación</h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto">Guía de mejores prácticas para lenguajes de programación, diseñada para un desarrollo eficiente y consistente.</p>
+</header>
 
-<body>
+<!-- Main Content -->
+<main class="container mx-auto py-12 px-6">
+  <!-- Introduction -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-semibold text-center mb-6">¿Por qué son importantes los estándares de codificación?</h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center">Los estándares de codificación aseguran que el código sea legible, mantenible y escalable. A continuación, exploramos las mejores prácticas para diferentes lenguajes de programación.</p>
+  </section>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <!-- Coding Standards by Language -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Python -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Python</h3>
+      <ul class="list-disc pl-5 text-gray-600">
+        <li>Sigue <a href="https://peps.python.org/pep-0008/" class="text-blue-500 hover:underline">PEP 8</a> para estilo de código.</li>
+        <li>Usa nombres descriptivos para variables y funciones.</li>
+        <li>Incluye docstrings en funciones y módulos.</li>
+        <li>Evita líneas de código superiores a 79 caracteres.</li>
+      </ul>
+    </div>
 
+    <!-- JavaScript -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">JavaScript</h3>
+      <ul class="list-disc pl-5 text-gray-600">
+        <li>Usa <a href="https://airbnb.io/javascript/" class="text-blue-500 hover:underline">Airbnb JavaScript Style Guide</a>.</li>
+        <li>Prefiere 'const' y 'let' sobre 'var'.</li>
+        <li>Implementa funciones flecha para mayor claridad.</li>
+        <li>Evita funciones anidadas profundas.</li>
+      </ul>
+    </div>
+
+    <!-- Java -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Java</h3>
+      <ul class="list-disc pl-5 text-gray-600">
+        <li>Sigue las <a href="https://www.oracle.com/java/technologies/javase/codeconventions-intro.html" class="text-blue-500 hover:underline">Convenciones de Oracle</a>.</li>
+        <li>Usa CamelCase para nombres de clases y métodos.</li>
+        <li>Coloca una clase por archivo.</li>
+        <li>Usa excepciones para manejar errores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center mt-12">
+    <h2 class="text-3xl font-semibold mb-4">¡Adopta los estándares hoy!</h2>
+    <p class="text-lg text-gray-600 mb-6">Mejora la calidad de tu código y la colaboración en equipo con estas prácticas.</p>
+    <a href="#contact" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Contáctanos para más información</a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 px-6 text-center">
+  <p>&copy; 2025 Informe de Estándares de Codificación. Todos los derechos reservados.</p>
+</footer>
 </body>
-
 </html>

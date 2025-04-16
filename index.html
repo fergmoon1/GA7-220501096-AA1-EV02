@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomenclatura para Clases, Métodos y Comentarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .code-snippet {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .hero-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="hero-section text-white py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Nomenclatura para Clases, Métodos y Comentarios</h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto">Guía para nombrar clases, métodos y estructurar comentarios de manera clara y profesional en diferentes lenguajes de programación.</p>
+</header>
 
+<!-- Main Content -->
+<main class="container mx-auto py-12 px-6">
+  <!-- Introduction -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-semibold text-center mb-6">¿Por qué es importante la nomenclatura?</h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center">Una nomenclatura clara para clases, métodos y comentarios mejora la legibilidad, facilita el mantenimiento y asegura un código comprensible para todos los desarrolladores.</p>
+  </section>
+
+  <!-- Nomenclature Guidelines -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Python -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Python</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Clases:</strong> Usa PascalCase. Ejemplo: <code>UserProfile</code></li>
+        <li><strong>Métodos:</strong> Usa snake_case, verbos para acciones. Ejemplo: <code>calculate_total</code></li>
+        <li><strong>Comentarios:</strong> Usa docstrings para clases/métodos, comentarios en línea para aclaraciones breves.</li>
+      </ul>
+      <div class="code-snippet">
+        class UserProfile:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"""Clase para gestionar perfiles de usuario."""<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def calculate_total(self):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Calcula el total de puntos<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font co-bold text-blue-600 mb-4">JavaScript</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Clases:</strong> Usa PascalCase. Ejemplo: <code>ShoppingCart</code></li>
+        <li><strong>Métodos:</strong> Usa camelCase, verbos para acciones. Ejemplo: <code>addItem</code></li>
+        <li><strong>Comentarios:</strong> Usa JSDoc para funciones/clases, comentarios en línea para detalles.</li>
+      </ul>
+      <div class="code-snippet">
+        class ShoppingCart {<br>
+        &nbsp;&nbsp;/** Añade un ítem al carrito */<br>
+        &nbsp;&nbsp;addItem(item) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;// Incrementa contador<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </div>
+    </div>
+
+    <!-- Java -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Java</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Clases:</strong> Usa PascalCase. Ejemplo: <code>EmployeeManager</code></li>
+        <li><strong>Métodos:</strong> Usa camelCase, verbos para acciones. Ejemplo: <code>getEmployeeId</code></li>
+        <li><strong>Comentarios:</strong> Usa JavaDoc para clases/métodos, comentarios en línea para claridad.</li>
+      </ul>
+      <div class="code-snippet">
+        /** Clase para gestionar empleados */<br>
+        public class EmployeeManager {<br>
+        &nbsp;&nbsp;/** Obtiene el ID del empleado */<br>
+        &nbsp;&nbsp;public int getEmployeeId() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;// Retorna el ID<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section class="mt-12">
+    <h2 class="text-3xl font-semibold text-center mb-6">Mejores prácticas generales</h2>
+    <ul class="list-disc pl-5 text-lg text-gray-600 max-w-3xl mx-auto">
+      <li><strong>Clases:</strong> Usa nombres sustantivos que describan la entidad (ej. <code>OrderProcessor</code>).</li>
+      <li><strong>Métodos:</strong> Usa verbos que indiquen la acción (ej. <code>processOrder</code>).</li>
+      <li><strong>Comentarios:</strong> Sé conciso, explica el "por qué" más que el "qué", usa herramientas como JavaDoc o JSDoc.</li>
+      <li>Mantén consistencia en el estilo dentro del proyecto.</li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center mt-12">
+    <h2 class="text-3xl font-semibold mb-4">¡Estandariza tu código!</h2>
+    <p class="text-lg text-gray-600 mb-6">Aplica estas prácticas para un código más legible y profesional.</p>
+    <a href="#contact" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Explora más recursos</a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 px-6 text-center">
+  <p>© 2025 Guía de Nomenclatura para Clases, Métodos y Comentarios. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

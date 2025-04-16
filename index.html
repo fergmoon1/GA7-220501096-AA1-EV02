@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomenclatura para Variables y Constantes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #1e40af, #60a5fa);
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .code-snippet {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .hero-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="hero-section text-white py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Nomenclatura para Variables y Constantes</h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto">Guía práctica para nombrar variables y constantes de manera clara y consistente en diferentes lenguajes de programación.</p>
+</header>
 
+<!-- Main Content -->
+<main class="container mx-auto py-12 px-6">
+  <!-- Introduction -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-semibold text-center mb-6">Importancia de una nomenclatura adecuada</h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center">Una buena nomenclatura mejora la legibilidad del código, facilita el mantenimiento y promueve la colaboración en equipo. A continuación, se presentan las mejores prácticas para nombrar variables y constantes.</p>
+  </section>
+
+  <!-- Nomenclature Guidelines -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Python -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Python</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Variables:</strong> Usa snake_case (minúsculas con guiones bajos). Ejemplo: <code>user_name</code></li>
+        <li><strong>Constantes:</strong> Usa MAYÚSCULAS con guiones bajos. Ejemplo: <code>MAX_USERS</code></li>
+        <li>Nombres descriptivos y específicos.</li>
+        <li>Evita nombres genéricos como <code>temp</code> o <code>data</code>.</li>
+      </ul>
+      <div class="code-snippet">
+        user_age = 25<br>
+        MAX_LOGIN_ATTEMPTS = 3
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">JavaScript</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Variables:</strong> Usa camelCase. Ejemplo: <code>userProfile</code></li>
+        <li><strong>Constantes:</strong> Usa MAYÚSCULAS con guiones bajos. Ejemplo: <code>API_KEY</code></li>
+        <li>Prefiere nombres que indiquen propósito.</li>
+        <li>Usa <code>const</code> para constantes inmutables.</li>
+      </ul>
+      <div class="code-snippet">
+        let userProfile = {};<br>
+        const API_KEY = "xyz123";
+      </div>
+    </div>
+
+    <!-- Java -->
+    <div class="card bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-blue-600 mb-4">Java</h3>
+      <ul class="list-disc pl-5 text-gray-600 mb-4">
+        <li><strong>Variables:</strong> Usa camelCase. Ejemplo: <code>employeeId</code></li>
+        <li><strong>Constantes:</strong> Usa MAYÚSCULAS con guiones bajos. Ejemplo: <code>MAX_CONNECTIONS</code></li>
+        <li>Usa nombres claros y concisos.</li>
+        <li>Evita abreviaturas ambiguas.</li>
+      </ul>
+      <div class="code-snippet">
+        int employeeId = 1001;<br>
+        static final int MAX_CONNECTIONS = 50;
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section class="mt-12">
+    <h2 class="text-3xl font-semibold text-center mb-6">Mejores prácticas generales</h2>
+    <ul class="list-disc pl-5 text-lg text-gray-600 max-w-3xl mx-auto">
+      <li>Usa nombres que reflejen la intención y el propósito.</li>
+      <li>Mantén consistencia en el estilo de nomenclatura dentro del proyecto.</li>
+      <li>Evita nombres demasiado largos o redundantes.</li>
+      <li>Revisa las guías de estilo específicas del lenguaje (PEP 8, Airbnb, Oracle).</li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center mt-12">
+    <h2 class="text-3xl font-semibold mb-4">¡Implementa una nomenclatura clara!</h2>
+    <p class="text-lg text-gray-600 mb-6">Adopta estas prácticas para mejorar la calidad y legibilidad de tu código.</p>
+    <a href="#contact" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Contáctanos para más recursos</a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 px-6 text-center">
+  <p>© 2025 Guía de Nomenclatura para Variables y Constantes. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
